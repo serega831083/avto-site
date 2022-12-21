@@ -1,117 +1,140 @@
-*{
+* {
     margin: 0;
     box-sizing: border-box;
 }
-.container{
+
+.container {
     margin: 0 auto;
     max-width: 1000px;
 }
-#header{
+
+#header {
+    /* Не уверен, что высота блока должна задаваться от ШИРИНЫ экрана, может vh? */
     height: 53vw;
     background: url("./img/bg_top.png") top center / 100% auto no-repeat;
     position: relative;
 }
-#slider{
+
+#slider {
+    /* Не уверен, что высота блока должна задаваться от ШИРИНЫ экрана, может vh? */
     min-height: 33vw;
-    background: url("./img/bg_slider.png")  center  no-repeat;
+    background: url("./img/bg_slider.png") center no-repeat;
     background-size: cover;
 }
-#footer{
+
+#footer {
     position: relative;
+    /* Не уверен, что высота блока должна задаваться от ШИРИНЫ экрана, может vh? */
     height: 40vw;
-    background: url(./img/bg_footer.png) top center  no-repeat;
+    background: url(./img/bg_footer.png) top center no-repeat;
     background-size: cover;
 }
-.header_top-nav{
+
+.header_top-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.nav_logo{
+
+.nav_logo {
     width: 65px;
     height: 65px;
     border-radius: 50%;
     margin-left: 10px;
     background: url(./img/Logo.png) top center/100%;
 }
-.nav_top-menu{
+
+.nav_top-menu {
     Font-family: Old Standard TT;
     font-size: 1.3rem;
 }
-.nav_item{
+
+.nav_item {
     color: rgb(7, 7, 7);
     margin-right: 30px;
     text-decoration: none;
     text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
 }
-hr{
+
+hr {
     background-color: #6A5757;
     height: 3px;
 }
-.header_top-title{
+
+.header_top-title {
     text-align: center;
 }
-h1{
+
+h1 {
     margin-top: 10px;
-    color:#CA2E2E ;
-    font-family:Viaoda Libre;
+    color: #CA2E2E;
+    font-family: Viaoda Libre;
     letter-spacing: 6px;
     font-size: 3rem;
-    text-shadow: 1px 0 1px #000, 
-    0 2px 4px rgba(0, 0, 0, 0.8), 
-    -1px 0 5px rgba(0, 0, 0, 0.8), 
-    0 -1px 1px rgba(0, 0, 0, 0.8);
+    text-shadow: 1px 0 1px #000,
+        0 2px 4px rgba(0, 0, 0, 0.8),
+        -1px 0 5px rgba(0, 0, 0, 0.8),
+        0 -1px 1px rgba(0, 0, 0, 0.8);
     font-weight: 400;
 }
-h2{
+
+h2 {
     font-size: 1.6rem;
     font-weight: 300;
-    font-family:Old Standard TT;
+    font-family: Old Standard TT;
     color: #000000;
-    text-shadow: 1px 1px 1px #000; 
+    text-shadow: 1px 1px 1px #000;
 }
-h3{
+
+h3 {
     margin-top: 10px;
     font-weight: 500;
     font-size: 1.5rem;
-    font-family:Viaoda Libre;
+    font-family: Viaoda Libre;
     letter-spacing: 8px;
-    color:#ca2e77;
-    text-shadow: 1px 0 1px #000, 
-    0 1px 1px rgba(0, 0, 0, 0.8), 
-    1px 0 1px rgba(0, 0, 0, 0.8), 
-    0 1px 1px rgba(0, 0, 0, 0.8);
+    color: #ca2e77;
+    text-shadow: 1px 0 1px #000,
+        0 1px 1px rgba(0, 0, 0, 0.8),
+        1px 0 1px rgba(0, 0, 0, 0.8),
+        0 1px 1px rgba(0, 0, 0, 0.8);
 }
-h4{
+
+h4 {
     font-size: 1.8rem;
     color: #400CAF;
     letter-spacing: 0.4rem;
 }
-a{
+
+a {
     text-decoration: none;
-    color: white;}
-.img-line{
+    color: white;
+}
+
+.img-line {
     width: 100%;
     margin-top: -30px;
 }
-.header_top-button{
+
+.header_top-button {
     position: absolute;
     left: 50%;
     margin-left: -105px;
     bottom: 0;
 }
-button{
-    font-family:Old Standard TT;
+
+button {
+    font-family: Old Standard TT;
     font-size: 1.2rem;
     color: white;
     margin-bottom: 4vw;
     padding: 15px 30px;
     border: 3px #AA3F3F solid;
-    background-color:#C36B6B;
+    background-color: #C36B6B;
     border-radius: 15px;
     cursor: pointer;
 }
-#form{
+
+#form {
     position: absolute;
     display: none;
     top: 0;
@@ -121,58 +144,85 @@ button{
     text-align: center;
     background-color: rgb(238, 238, 238, 0.9)
 }
-#form h3{
-    margin-bottom: 10px;}
-#form input{
-    margin: 0; display: inline-block;  width: 70%; margin-bottom: 15px; height: 40px;
+
+#form h3 {
+    margin-bottom: 10px;
 }
 
-.header_top-button:hover #form{
+#form input {
+    margin: 0;
+    display: inline-block;
+    width: 70%;
+    margin-bottom: 15px;
+    height: 40px;
+}
+
+/* 
+    Форма по ховеру - плохой UX, 
+    тут либо с JS-ом, 
+    либо со скрытым checkbox-ом.
+    В мобилках нет ховера
+
+    Может просто её сделать чуть полу-прозрачной, чтобы она не сильно портила дизайн-картинку,
+    а при :focus-within делать ее более видимой?
+ */
+.header_top-button:hover #form {
     display: block;
     position: absolute;
     top: -222px;
     border-radius: 25px;
-    }
-    
-li img{
+}
+
+li img {
     height: 45px;
 }
-li{
+
+li {
     list-style-type: none;
     margin-left: 10px;
 }
-ul{
+
+ul {
     padding: 0;
     display: flex;
     align-items: center;
 }
-.footer_contact-icons{
+
+.footer_contact-icons {
     text-align: center;
 }
-.footer_contact{
-    font-family:Old Standard TT;
+
+.footer_contact {
+    /* На сайте используются всего два шрифта,
+    возможно, просто стоит сделать для два доп. класса, чтобы больше не переписывать  
+     */
+    font-family: Old Standard TT;
     margin: 0px 10px;
     margin-top: 12vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-p{
+
+p {
     text-align: center;
     margin-top: 80px;
     font-size: 1.5rem;
     line-height: 1.4;
 }
-.footer_contact-tell{
+
+.footer_contact-tell {
     font-size: 1.5rem;
     color: white;
     text-decoration: none;
-    font-family:Old Standard TT;
+    font-family: Old Standard TT;
 }
-.hide{
-    display: none;}
 
-.slider{
+.hide {
+    display: none;
+}
+
+.slider {
     position: relative;
     width: 50%;
     height: 30vw;
@@ -192,14 +242,14 @@ p{
     align-items: center;
     justify-content: center;
     transition: transform 400ms ease;
-   
+
 }
 
-.slider img{
+.slider img {
     border: 5px solid white;
 }
 
-input[type=radio]{
+input[type=radio] {
     position: relative;
     top: 110%;
     left: 50%;
@@ -210,55 +260,61 @@ input[type=radio]{
     transform: translateX(-83px);
     cursor: pointer;
 }
-input[type=radio]:checked{
+
+input[type=radio]:checked {
     opacity: 1;
 }
-.s1:checked ~ .slider1,
-.s2:checked ~ .slider2,
-.s3:checked ~ .slider3,
-.s4:checked ~ .slider4,
-.s5:checked ~ .slider5{
 
-    
+/* Огонь слайдер
+    Возможно, чтобы не запутаться в номерах классов может помочь :nth-type/:nth-child
+
+*/
+.s1:checked~.slider1,
+.s2:checked~.slider2,
+.s3:checked~.slider3,
+.s4:checked~.slider4,
+.s5:checked~.slider5 {
+
+
     transform: translate3d(0%, 0, 0px);
 
 }
 
-.s1:checked ~ .slider2,
-.s2:checked ~ .slider3,
-.s3:checked ~ .slider4,
-.s4:checked ~ .slider5,
-.s5:checked ~ .slider1{
+.s1:checked~.slider2,
+.s2:checked~.slider3,
+.s3:checked~.slider4,
+.s4:checked~.slider5,
+.s5:checked~.slider1 {
 
     transform: translate3d(20%, 0, -100px);
 
 }
 
-.s1:checked ~ .slider3,
-.s2:checked ~ .slider4,
-.s3:checked ~ .slider5,
-.s4:checked ~ .slider1,
-.s5:checked ~ .slider2{
+.s1:checked~.slider3,
+.s2:checked~.slider4,
+.s3:checked~.slider5,
+.s4:checked~.slider1,
+.s5:checked~.slider2 {
 
     transform: translate3d(40%, 0, -250px);
 
 }
 
-.s1:checked ~ .slider4,
-.s2:checked ~ .slider5,
-.s3:checked ~ .slider1,
-.s4:checked ~ .slider2,
-.s5:checked ~ .slider3{
+.s1:checked~.slider4,
+.s2:checked~.slider5,
+.s3:checked~.slider1,
+.s4:checked~.slider2,
+.s5:checked~.slider3 {
 
     transform: translate3d(-20%, 0, -100px);
 
 }
 
-.s1:checked ~ .slider5,
-.s2:checked ~ .slider1,
-.s3:checked ~ .slider2,
-.s4:checked ~ .slider3,
-.s5:checked ~ .slider4{
+.s1:checked~.slider5,
+.s2:checked~.slider1,
+.s3:checked~.slider2,
+.s4:checked~.slider3,
+.s5:checked~.slider4 {
 
     transform: translate3d(-40%, 0, -250px);
 
@@ -267,50 +323,64 @@ input[type=radio]:checked{
 
 
 
-@media(max-width:665px){
-.footer_contact{
-    display:block;
-    text-align: center;
+@media(max-width:665px) {
+    .footer_contact {
+        display: block;
+        text-align: center;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    .show {
+        display: none;
+    }
+
+    .hide {
+        display: block;
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+
+    button {
+        padding: 0 30px;
+    }
+
+    h3 {
+        margin-top: 0;
+    }
 }
 
-ul{
-    display: flex;
-    justify-content: center;
-}
-.show{
-    display: none;}
-.hide{
-    display: block;
-}
-h1{
-    margin-top: 0;}
-button{
-    padding: 0 30px;}
-h3{
-    margin-top: 0;}
+@media(max-width:850px) {
+    h2 {
+        display: none;
+    }
+
+    .hide {
+        display: inline-block;
+    }
+
+    .header_top-title {
+        display: inline-block;
+        background-color: rgba(180, 172, 177, 0.3);
+        border-radius: 25px;
+    }
+
+    #header {
+        text-align: center;
+    }
 }
 
-@media(max-width:850px){
-h2{
-    display: none;}
-.hide{
-    display: inline-block;
-}
-.header_top-title{
-    display: inline-block;
-    background-color: rgba(180, 172, 177, 0.3);
-    border-radius: 25px;
-}
-#header{
-    text-align: center;}
-}
+@media(min-width:1400px) {
+    .header_top-title {
+        margin-top: 60px;
+    }
 
-@media(min-width:1400px){
-.header_top-title{
-    margin-top: 60px;}
-button{
-    margin-bottom: 120px;}
+    button {
+        margin-bottom: 120px;
+    }
 }
-
-
-

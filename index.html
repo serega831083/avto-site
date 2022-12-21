@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&family=Viaoda+Libre&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&family=Viaoda+Libre&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Amur_avto</title>
 </head>
+
 <body>
-    
+
     <section id="header">
         <div class="header_top">
             <div class="container">
@@ -27,7 +30,9 @@
         </div>
         <hr>
         <div class="header_top-title">
+            <!-- Может сделать весь блок - заголовком, а внутри него на p/span/div-ах заверстать -->
             <h1>AMUR_AVTO</h1>
+            <!-- По смыслу страницы это явно не заголовки: -->
             <h2 class="show">аренда автомобиля с водителем на<br>Вашу свадьбу</h2>
             <h2 class="hide">аренда автомобиля</h2>
             <h3>г.Ижевск</h3>
@@ -38,19 +43,21 @@
         <div class="header_top-button">
             <section id="form">
                 <div>
+                    <!-- Чтобы форма заработала - инпуты должны быть в теге form -->
                     <h3 style="margin-bottom: 10px;">форма заказа</h3>
+                    <!-- попробуй аттрибут Placeholder, Лучше - labels -->
                     <input type="text" value="имя">
-                    <input type="text" value="тел." >
-                    <input type="text" value="интересующая дата" >
-                    </div>
-               
+                    <input type="text" value="тел.">
+                    <input type="text" value="интересующая дата">
+                </div>
+
             </section>
 
-            
+
             <a href="#footer"><button>оставить заявку</button></a>
         </div>
 
-        
+
 
     </section>
 
@@ -65,21 +72,22 @@
                 <img src="./img/Liner.png" alt="" class="img-line">
             </div>
         </div>
-            
-            <div class="slider">
-                <input type="radio" name="slider" class="s1" checked>
-                <input type="radio" name="slider" class="s2">
-                <input type="radio" name="slider" class="s3">
-                <input type="radio" name="slider" class="s4">
-                <input type="radio" name="slider" class="s5">
-                <label for="s1" class="slider1"><img src="./img/avto-1.jpg" alt=""></label>
-                <label for="s2" class="slider2"><img src="./img/1611660.jpg" alt=""></label>
-                <label for="s3" class="slider3"><img src="./img/5b6f2629226e489bb93c8262.jpg" alt=""></label>
-                <label for="s4" class="slider4"><img src="./img/Blm427a_qrDOfli2uO8SXSR4rLYAfqi6BriuQgp4qLAMPg.jpg" alt=""></label>
-                <label for="s5" class="slider5"><img src="./img/1611660.jpg" alt=""></label>
-            </div>
-              
-        
+
+        <div class="slider">
+            <input type="radio" name="slider" class="s1" checked>
+            <input type="radio" name="slider" class="s2">
+            <input type="radio" name="slider" class="s3">
+            <input type="radio" name="slider" class="s4">
+            <input type="radio" name="slider" class="s5">
+            <label for="s1" class="slider1"><img src="./img/avto-1.jpg" alt=""></label>
+            <label for="s2" class="slider2"><img src="./img/1611660.jpg" alt=""></label>
+            <label for="s3" class="slider3"><img src="./img/5b6f2629226e489bb93c8262.jpg" alt=""></label>
+            <label for="s4" class="slider4"><img src="./img/Blm427a_qrDOfli2uO8SXSR4rLYAfqi6BriuQgp4qLAMPg.jpg"
+                    alt=""></label>
+            <label for="s5" class="slider5"><img src="./img/1611660.jpg" alt=""></label>
+        </div>
+
+
     </section>
 
 
@@ -99,8 +107,9 @@
                 </p>
             </div>
 
-      
-            <div class="footer_contact" >
+
+            <div class="footer_contact">
+                <!-- Не забудь посмотреть ссылки вида "tel:" -->
                 <div class="footer_contact-tell"><a href="">тел:8-982-832-33-67</a></div>
                 <div class="footer_contact-icons">
                     <h4>связаться со мной</h4>
@@ -116,6 +125,7 @@
     </section>
 
 
-    
+
 </body>
+
 </html>
