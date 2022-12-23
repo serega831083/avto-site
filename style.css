@@ -18,7 +18,7 @@
 }
 #footer{
     position: relative;
-    height: 40vw;
+    height: 100%;
     background: url(./img/bg_footer.png) top center  no-repeat;
     background-size: cover;
 }
@@ -63,24 +63,30 @@ h1{
     0 -1px 1px rgba(0, 0, 0, 0.8);
     font-weight: 400;
 }
-h2{
+.show, .hide{
+    letter-spacing: 1px;
     font-size: 1.6rem;
-    font-weight: 300;
+    font-weight:500;
     font-family:Old Standard TT;
     color: #000000;
-    text-shadow: 1px 1px 1px #000; 
-}
-h3{
-    margin-top: 10px;
+    text-shadow: 1px 1px 1px #000; }
+span{
+    display: block;
+   
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-family:Viaoda Libre;
-    letter-spacing: 8px;
+    letter-spacing: 3px;
     color:#ca2e77;
     text-shadow: 1px 0 1px #000, 
     0 1px 1px rgba(0, 0, 0, 0.8), 
     1px 0 1px rgba(0, 0, 0, 0.8), 
     0 1px 1px rgba(0, 0, 0, 0.8);
+}
+#form span{
+    padding-top: 5px;
+    padding-bottom: 10px;
+
 }
 h4{
     font-size: 1.8rem;
@@ -112,11 +118,9 @@ button{
     cursor: pointer;
 }
 #form{
-    position: absolute;
-    display: none;
-    top: 0;
-    left: 50%;
-    margin-left: -225px;
+    padding-bottom: 15px;
+    border-radius: 25px;
+    margin: 30px auto 0;
     width: 450px;
     text-align: center;
     background-color: rgb(238, 238, 238, 0.9)
@@ -152,14 +156,14 @@ ul{
 .footer_contact{
     font-family:Old Standard TT;
     margin: 0px 10px;
-    margin-top: 12vw;
+    margin-top: 5vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 p{
     text-align: center;
-    margin-top: 80px;
+    margin-top: 90px;
     font-size: 1.5rem;
     line-height: 1.4;
 }
@@ -174,9 +178,9 @@ p{
 
 .slider{
     position: relative;
-    width: 50%;
-    height: 30vw;
-    margin: -10px auto;
+    width: 60%;
+    height: 36vw;
+    margin: -10px auto 3px;
     perspective: 1100px;
     transform-style: preserve-3d;
 }
@@ -264,37 +268,25 @@ input[type=radio]:checked{
 
 }
 
+li:nth-child(3) img{
+    height: 55px;}
 
 
-
-@media(max-width:665px){
-.footer_contact{
-    display:block;
-    text-align: center;
+@media(min-width:1400px){
+.header_top-title{
+    margin-top: 60px;
+}
+button{
+    margin-bottom: 120px;
+}
 }
 
-ul{
-    display: flex;
-    justify-content: center;
-}
-.show{
+
+@media(max-width:850px){
+.show, .hide{
     display: none;}
 .hide{
     display: block;
-}
-h1{
-    margin-top: 0;}
-button{
-    padding: 0 30px;}
-h3{
-    margin-top: 0;}
-}
-
-@media(max-width:850px){
-h2{
-    display: none;}
-.hide{
-    display: inline-block;
 }
 .header_top-title{
     display: inline-block;
@@ -305,12 +297,36 @@ h2{
     text-align: center;}
 }
 
-@media(min-width:1400px){
-.header_top-title{
-    margin-top: 60px;}
-button{
-    margin-bottom: 120px;}
+@media(max-width:665px){
+.footer_contact{
+    display:block;
+    text-align: center;
 }
-
-
-
+    
+ul{
+    display: flex;
+    justify-content: center;
+}
+.show{
+    display: none;}
+.hide{
+    margin-top: -15px;
+    display: block;
+}
+h1{
+    margin-top: 0;}
+button{
+    padding: 12px 30px;
+}
+span{
+    margin-top: -9px;
+}
+.nav_item{
+    margin-right: 5px;
+}
+.header_top-nav{
+    justify-content: center;
+}
+p{
+    font-size: 1.3rem;}
+}
